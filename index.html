@@ -494,14 +494,21 @@
 
     <form class="js-speaker-form">
 
-      <label for="tel">Имя</label>
-      <input type="tel" name="user-name" id="tel">
+      <label for="name">Имя</label>
+      <input type="name" name="user-name" id="name" autofocus>
 
-      <label for="name">Телефон</label>
-      <input type="text" name="tel" id="name">
+      <label for="tel">Телефон</label>
+      <input type="tel" name="tel" id="tel">
 
       <label for="email">Почта</label>
       <input type="email" name="email" id="email">
+
+      <label for="comment">Комментарий</label>
+      <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+
+
+      <label for="tx">Соглашаюсь с рассылкой и принимаю Условия договора</label>
+      <input type="checkbox" name="topic" value="tx" id="tx">
 
       <button type="submit">Отправить</button>
 
