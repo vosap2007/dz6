@@ -460,9 +460,9 @@
       <p class="developed container">2020 | Developed by GoIT Students</p>
     </footer>
 
-    <!--Модальное окно-->
+    <!--Модальное окно
     
-    <div class="backdrop is-hidden">
+     <div class="backdrop is-hidden">
       <div class="modal">
         <h2>Оставьте свои данные, мы вам перезвоним</h2>
         <ul>
@@ -477,43 +477,64 @@
         <button>Закрыть</button>
         <button>Отправить</button>
       </div>
-    </div>
+    </div> -->
 
-    <!--Форма подписки-->
+    <!--Форма подписки
 
     <form class="js-speaker-form">
-
       <label for="mail">Почта</label>
-      <input type="email" name="email" id="mail">
-      
-      <button type="submit">Подписаться</button>
+      <input type="email" name="email" id="mail" />
 
-    </form>
+      <button type="submit">Подписаться</button>
+    </form>-->
 
     <!--Форма данных-->
 
-    <form class="js-speaker-form">
+    <form class="form js-speaker-form">
+      <p class="form-text">Оставьте свои данные, мы вам перезвоним</p>
 
-      <label for="name">Имя</label>
-      <input type="name" name="user-name" id="name" autofocus>
+      <div class="form-fild">
+        <label for="name">Имя</label>
+        <input
+          type="name"
+          name="user-name"
+          id="name"
+          placeholder="Имя"
+          autofocus
+        />
+      </div>
 
-      <label for="tel">Телефон</label>
-      <input type="tel" name="tel" id="tel">
+      <div class="form-fild">
+        <label for="tel">Телефон</label>
+        <input type="tel" name="tel" id="tel" placeholder="Телефон" />
+      </div>
 
-      <label for="email">Почта</label>
-      <input type="email" name="email" id="email">
+      <div class="form-fild">
+        <label for="email">Почта</label>
+        <input type="email" name="email" id="email" placeholder="Почта" />
+      </div>
 
-      <label for="comment">Комментарий</label>
-      <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+      <div class="form-fild">
+        <label for="comment">Комментарий</label>
+        <textarea
+          name="comment"
+          id="comment"
+          cols="30"
+          rows="10"
+          placeholder="Комментарий"
+        ></textarea>
+      </div>
 
+      <div class="form-checkbox">
+        <input type="checkbox" name="topic" value="tx" id="tx" />
+        <label for="tx"
+          >Соглашаюсь с рассылкой и принимаю Условия договора</label
+        >
+      </div>
 
-      <label for="tx">Соглашаюсь с рассылкой и принимаю Условия договора</label>
-      <input type="checkbox" name="topic" value="tx" id="tx">
-
-      <button type="submit">Отправить</button>
-
+      <div>
+        <button type="submit">Отправить</button>
+      </div>
     </form>
-
-
   </body>
 </html>
