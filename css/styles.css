@@ -745,10 +745,8 @@ textarea {
 }
 
 .form-fild {
-  outline: 1px solid rgb(24, 199, 117);
   margin-bottom: 30px;
-  display: flex;
-  flex-direction: column;
+  position: relative;
 }
 
 .form-fild input {
@@ -758,10 +756,6 @@ textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
-}
-
-.form-fild input::placeholder {
-  font-size: 14px;
 }
 
 .form-fild textarea {
@@ -794,4 +788,28 @@ textarea {
   font-size: 14px;
   margin-left: 8.3px;
   margin-bottom: 30px;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  color: #2196f3;
+  transform: translateY(-45px) translateX(-30px);
+}
+
+.form-label {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+  transition: transform 250ms linear;
+}
+
+.icon-form {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+
+  display: inline-block;
+  width: 18px;
+  height: 18px;
 }
