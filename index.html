@@ -62,7 +62,7 @@
             ЭФФЕКТИВНЫЕ РЕШЕНИЯ <br />
             ДЛЯ ВАШЕГО БИЗНЕСА
           </h1>
-          <a href="" class="hero-button">Заказать услугу</a>
+          <button class="hero-button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
 
@@ -456,13 +456,28 @@
             </li>
           </ul>
         </div>
+
+        <div class="subscription">
+          <p class="text-subscription">ПОДПИШИТЕСЬ НА РАССЫЛКУ</p>
+          <form class="subscription-border">
+            <div class="flex">
+              <input type="email" name="email" placeholder="E-mail" />
+              <button class="subscription-button" type="submit">
+                Подписаться
+                <svg class="icon-button">
+                  <use href="./img/symbol-defs.svg#icon-icon-send"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
       <p class="developed container">2020 | Developed by GoIT Students</p>
     </footer>
 
     <!--Модальное окно
     
-     <div class="backdrop is-hidden">
+    <div class="backdrop is-hidden">
       <div class="modal">
         <h2>Оставьте свои данные, мы вам перезвоним</h2>
         <ul>
@@ -477,86 +492,91 @@
         <button>Закрыть</button>
         <button>Отправить</button>
       </div>
-    </div> -->
-
-    <!--Форма подписки
-
-    <form class="js-speaker-form">
-      <label for="mail">Почта</label>
-      <input type="email" name="email" id="mail" />
-
-      <button type="submit">Подписаться</button>
-    </form>-->
+    </div>
+-->
 
     <!--Форма данных-->
 
-    <form class="form js-speaker-form">
-      <p class="form-text">Оставьте свои данные, мы вам перезвоним</p>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <form class="form">
+          <button data-modal-close class="close-modal">
+            <svg width="20" height="20">
+              <use href="./img/symbol-defs.svg#icon-Vector"></use>
+            </svg>
+          </button>
 
-      <div class="form-fild">
-        <input
-          type="name"
-          name="user-name"
-          id="name"
-          class="form-input"
-          placeholder=" "
-          autofocus
-        />
-        <label for="name" class="form-label">Имя</label>
-        <svg class="icon-form">
-          <use href="./img/symbol-defs.svg#icon-person-black"></use>
-        </svg>
-      </div>
+          <p class="form-text">Оставьте свои данные, мы вам перезвоним</p>
 
-      <div class="form-fild">
-        <input
-          type="tel"
-          name="tel"
-          id="tel"
-          placeholder=" "
-          class="form-input"
-        />
-        <label for="tel" class="form-label">Телефон</label>
-        <svg class="icon-form">
-          <use href="./img/symbol-defs.svg#icon-phone-black"></use>
-        </svg>
-      </div>
+          <div class="form-fild">
+            <input
+              type="name"
+              name="user-name"
+              id="name"
+              class="form-input"
+              placeholder=" "
+              autofocus
+            />
+            <label for="name" class="form-label">Имя</label>
+            <svg class="icon-form">
+              <use href="./img/symbol-defs.svg#icon-person-black"></use>
+            </svg>
+          </div>
 
-      <div class="form-fild">
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder=" "
-          class="form-input"
-        />
-        <label for="email" class="form-label">Почта</label>
-        <svg class="icon-form">
-          <use href="./img/symbol-defs.svg#icon-email-black"></use>
-        </svg>
-      </div>
+          <div class="form-fild">
+            <input
+              type="tel"
+              name="tel"
+              id="tel"
+              placeholder=" "
+              class="form-input"
+            />
+            <label for="tel" class="form-label">Телефон</label>
+            <svg class="icon-form">
+              <use href="./img/symbol-defs.svg#icon-phone-black"></use>
+            </svg>
+          </div>
 
-      <div class="form-fild">
-        <label for="comment">Комментарий</label>
-        <textarea
-          name="comment"
-          id="comment"
-          cols="30"
-          rows="10"
-          placeholder="Комментарий"
-        ></textarea>
-      </div>
+          <div class="form-fild">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder=" "
+              class="form-input"
+            />
+            <label for="email" class="form-label">Почта</label>
+            <svg class="icon-form">
+              <use href="./img/symbol-defs.svg#icon-email-black"></use>
+            </svg>
+          </div>
 
-      <div class="form-checkbox">
-        <input type="checkbox" name="topic" value="tx" id="tx" />
-        <label for="tx"
-          >Соглашаюсь с рассылкой и принимаю Условия договора</label
-        >
-      </div>
+          <div class="form-fild">
+            <label for="comment"></label>
+            <textarea
+              name="comment"
+              id="comment"
+              cols="30"
+              rows="10"
+              placeholder="Комментарий"
+            ></textarea>
+          </div>
 
-      <div>
-        <button type="submit">Отправить</button>
+          <div class="form-checkbox">
+            <label class="checkbox-label">
+              <input class="checkbox" type="checkbox" name="topic" value="tx" />
+              <span class="icon-checkbox"></span>
+              Соглашаюсь с рассылкой и принимаю
+              <a href="" class="link-form">Условия договора</a>
+            </label>
+          </div>
+
+          <div>
+            <button class="form-button" type="submit">Отправить</button>
+          </div>
+        </form>
       </div>
-    </form>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

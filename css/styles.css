@@ -541,6 +541,60 @@ img {
   --color3: #ffffff;
 }
 
+.subscription-border {
+  display: ;
+}
+
+.text-subscription {
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+
+  color: #ffffff;
+}
+
+.subscription-border input {
+  width: 358px;
+  padding: 16px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background: #ffffff00;
+}
+
+.subscription-button {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  padding: 10px 29px;
+
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  margin-left: 370px;
+
+  color: #ffffff;
+
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.icon-button {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+
+.flex {
+  display: flex;
+}
+
 /*---styles portfolio--*/
 
 .pro {
@@ -690,7 +744,7 @@ img {
   transform: translateY(0);
 }
 
-/*модальное окно
+/*модальное окно*/
 
 .backdrop {
   position: fixed;
@@ -699,6 +753,9 @@ img {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -706,22 +763,41 @@ img {
   pointer-events: none;
 }
 
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
 .modal {
   position: absolute;
-  width: 528px;
-  height: 581px;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
 
-  background: #ffffff;
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 1px 3px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  padding: 40px;
-  margin: 40px;
-}*/
+.close-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFFFFF;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-left: 450px;
+
+  background-size: contain;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-modal:hover {
+  --color3: #2196f3;
+}
+}
 
 /*Form*/
 
@@ -731,12 +807,10 @@ textarea {
 
 .form {
   width: 528px;
-  padding-left: 47.5px;
-  padding-right: 32.5px;
-  padding-top: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 7px;
   padding-bottom: 40px;
-  margin-left: auto;
-  margin-right: auto;
 
   background: #ffffff;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -745,7 +819,7 @@ textarea {
 }
 
 .form-fild {
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   position: relative;
 }
 
@@ -763,6 +837,8 @@ textarea {
 }
 
 .form-fild textarea {
+  width: 448px;
+  height: 120px;
   margin: 0;
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -775,8 +851,16 @@ textarea {
   line-height: 23px;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-top: 0px;
+  margin-bottom: 30px;
 
   color: #212121;
+}
+
+.checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .form-checkbox {
@@ -788,10 +872,33 @@ textarea {
   height: 15px;
 }
 
+.icon-checkbox {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+
+  border: 2px solid #212121;
+  border-radius: 4px;
+}
+
+.checkbox:checked + .icon-checkbox {
+  background-color:#2196f3;
+  border-color: #2196f3;
+  background-image: url("../img/Vector.svg");
+  background-size: contain;
+  background-origin: border-box;
+}
+
 .form-checkbox label {
   font-size: 14px;
   margin-left: 8.3px;
   margin-bottom: 30px;
+}
+
+.checkbox-label {
+  display: flex ;
+  align-items: center;
 }
 
 .form-input:focus + .form-label,
@@ -820,4 +927,23 @@ textarea {
 
 .form-input:focus ~ .icon-form {
   --color3: #2196f3;
+}
+
+.form-button {
+  width: 200px;
+  height: 50px;
+  padding: 10px 29px;
+  font-weight: bold;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin-left: 124px;
+}
+
+.link-form {
+  color:#2196f3; ;
 }
